@@ -1,0 +1,52 @@
+
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Manikanta Mutyala | Business & Data Analyst Portfolio</title>
+    <meta
+      name="description"
+      content="Business & Data Analyst with 4+ years of experience in Finance and Healthcare Analytics. Expert in SQL, Python, Power BI, Tableau, and Azure Data Factory."
+    />
+    <meta name="author" content="Manikanta Mutyala" />
+    <meta
+      name="keywords"
+      content="Business Analyst, Data Analyst, SQL, Python, Power BI, Tableau, Azure, Healthcare Analytics, Finance Analytics"
+    />
+
+    <!-- THEME: prevent flash of wrong theme & respect saved/system preference -->
+    <script>
+      (function () {
+        try {
+          var stored = localStorage.getItem("theme"); // "light" | "dark" | null
+          var systemDark =
+            window.matchMedia &&
+            window.matchMedia("(prefers-color-scheme: dark)").matches;
+          var isDark = stored ? stored === "dark" : systemDark;
+          if (isDark) {
+            document.documentElement.classList.add("dark");
+          } else {
+            document.documentElement.classList.remove("dark");
+          }
+        } catch (e) {
+          // safe no-op
+        }
+      })();
+    </script>
+
+    <!-- THEME: set browser address bar color for each mode -->
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#FAF9F6" />
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#121212" />
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
