@@ -91,7 +91,7 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="relative"
           >
-<div className="relative w-full max-w-sm mx-auto h-96 overflow-hidden">
+<div className="relative w-full max-w-[22rem] mx-auto h-[420px] overflow-hidden">
   <motion.div
     className="absolute inset-0 bg-gradient-to-r from-primary to-secondary rounded-2xl blur-2xl opacity-60"
     animate={{ scale: [1, 1.08, 1], rotate: [0, 5, 0] }}
@@ -100,9 +100,10 @@ const Hero = () => {
   <img
     src={heroPortrait}
     alt="Manikanta Mutyala - Business & Data Analyst"
-className="relative rounded-2xl shadow-2xl border-2 border-primary/50 w-full h-full object-cover hover:border-primary transition-all duration-300"
-/>
-  </div> 
+    className="relative rounded-2xl shadow-2xl border-2 border-primary/50 w-full h-full object-cover hover:border-primary transition-all duration-300"
+  />
+</div>
+ 
           </motion.div>
 </div>
 
