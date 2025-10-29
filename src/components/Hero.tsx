@@ -100,7 +100,7 @@ const Hero = () => {
   <img
     src={heroPortrait}
     alt="Manikanta Mutyala - Business & Data Analyst"
-    className="relative rounded-2xl shadow-2xl border-2 border-primary/50 w-full h-full object-cover hover:border-primary transition-all duration-300"
+    className="relative rounded-2xl shadow-2xl border-2 border-primary/50 w-full h-50 object-cover hover:border-primary transition-all duration-300"
 />
 </div>
 
