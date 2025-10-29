@@ -7,7 +7,10 @@ import heroPortrait from "@/assets/hero-portrait.jpg";
 
 const Hero = () => {
   return (
-    <section id="hero" className="min-h-screen flex items-center justify-center parallax-bg relative overflow-hidden">
+    <section
+      id="hero"
+      className="min-h-screen flex items-center justify-center parallax-bg relative overflow-hidden"
+    >
       {/* Animated golden background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div
@@ -28,13 +31,35 @@ const Hero = () => {
       </div>
 
       <div className="container mx-auto px-4 py-20 relative z-10">
+        {/* 👇 order control for mobile and desktop */}
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          {/* Left Content */}
+          {/* ✅ Profile First on Mobile */}
           <motion.div
+            className="relative order-1 md:order-2 flex justify-center"
+            initial={{ opacity: 0, scale: 0.8, rotate: -5 }}
+            animate={{ opacity: 1, scale: 1, rotate: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+          >
+            <div className="relative w-full max-w-[22rem] mx-auto h-[420px] overflow-hidden">
+              <motion.div
+                className="absolute inset-0 bg-gradient-to-r from-primary to-secondary rounded-2xl blur-2xl opacity-60"
+                animate={{ scale: [1, 1.08, 1], rotate: [0, 5, 0] }}
+                transition={{ duration: 4, repeat: Infinity }}
+              />
+              <img
+                src={heroPortrait}
+                alt="Manikanta Mutyala - Business & Data Analyst"
+                className="relative rounded-2xl shadow-2xl border-2 border-primary/50 w-full h-full object-cover hover:border-primary transition-all duration-300"
+              />
+            </div>
+          </motion.div>
+
+          {/* ✅ Content Second on Mobile */}
+          <motion.div
+            className="space-y-6 text-center md:text-left order-2 md:order-1"
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            className="space-y-6"
           >
             <motion.p
               className="text-primary text-lg font-inter uppercase tracking-wider font-semibold"
@@ -44,10 +69,10 @@ const Hero = () => {
             >
               Hi, I'm
             </motion.p>
-            <h1 className="text-5xl md:text-7xl font-poppins font-extrabold text-foreground">
+            <h1 className="text-4xl md:text-7xl font-poppins font-extrabold text-foreground leading-tight">
               Manikanta <span className="text-gradient">Mutyala</span>
             </h1>
-            <div className="text-xl md:text-2xl font-inter text-muted-foreground min-h-[80px]">
+            <div className="text-lg md:text-2xl font-inter text-muted-foreground min-h-[70px]">
               <TypeAnimation
                 sequence={[
                   "Transforming Data into Actionable Insights",
@@ -64,10 +89,10 @@ const Hero = () => {
                 repeat={Infinity}
               />
             </div>
-            <p className="text-foreground/70 font-inter text-lg max-w-xl">
-              Business & Data Analyst with 4+ years of experience driving insights in Finance and Healthcare Analytics
+            <p className="text-foreground/70 font-inter text-base md:text-lg max-w-xl mx-auto md:mx-0">
+              Business & Data Analyst with 4+ years of experience driving insights in Finance and Healthcare Analytics.
             </p>
-            <div className="flex flex-wrap gap-4 pt-4">
+            <div className="flex flex-wrap justify-center md:justify-start gap-4 pt-4">
               <Link to="projects" smooth={true} duration={500} offset={-80}>
                 <Button className="bg-gradient-to-r from-primary to-secondary hover:from-secondary hover:to-primary text-background font-inter font-semibold px-8 py-6 text-lg hover-glow shadow-lg">
                   View Projects
@@ -83,30 +108,7 @@ const Hero = () => {
               </Button>
             </div>
           </motion.div>
-
-          {/* Right Image */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8, rotate: -5 }}
-            animate={{ opacity: 1, scale: 1, rotate: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            className="relative"
-          >
-<div className="relative w-full max-w-[22rem] mx-auto h-[420px] overflow-hidden">
-  <motion.div
-    className="absolute inset-0 bg-gradient-to-r from-primary to-secondary rounded-2xl blur-2xl opacity-60"
-    animate={{ scale: [1, 1.08, 1], rotate: [0, 5, 0] }}
-    transition={{ duration: 4, repeat: Infinity }}
-  />
-  <img
-    src={heroPortrait}
-    alt="Manikanta Mutyala - Business & Data Analyst"
-    className="relative rounded-2xl shadow-2xl border-2 border-primary/50 w-full h-full object-cover hover:border-primary transition-all duration-300"
-  />
-</div>
- 
-          </motion.div>
-</div>
-
+        </div>
 
         {/* Scroll Indicator */}
         <motion.div
