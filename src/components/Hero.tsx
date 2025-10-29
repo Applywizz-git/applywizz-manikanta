@@ -91,7 +91,7 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="relative"
           >
-<div className="relative w-full max-w-md mx-auto h-56 md:h-72 overflow-hidden">
+<div className="relative w-full max-w-md mx-auto h-48 md:h-64 overflow-hidden">
   <motion.div
     className="absolute inset-0 bg-gradient-to-r from-primary to-secondary rounded-2xl blur-2xl opacity-60"
     animate={{ scale: [1, 1.08, 1], rotate: [0, 5, 0] }}
