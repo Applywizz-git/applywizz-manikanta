@@ -91,20 +91,19 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="relative"
           >
-            <div className="relative w-full max-w-md mx-auto">
-              <motion.div
-                className="absolute inset-0 bg-gradient-to-r from-primary to-secondary rounded-2xl blur-2xl opacity-60"
-                animate={{ scale: [1, 1.08, 1], rotate: [0, 5, 0] }}
-                transition={{ duration: 4, repeat: Infinity }}
-              />
-              <img
-                src={heroPortrait}
-                alt="Manikanta Mutyala - Business & Data Analyst"
-                className="relative rounded-2xl shadow-2xl border-2 border-primary/50 w-full object-cover hover:border-primary transition-all duration-300"
-              />
-            </div>
-          </motion.div>
-        </div>
+<div className="relative w-full max-w-md mx-auto h-72 md:h-96 overflow-hidden">
+  <motion.div
+    className="absolute inset-0 bg-gradient-to-r from-primary to-secondary rounded-2xl blur-2xl opacity-60"
+    animate={{ scale: [1, 1.08, 1], rotate: [0, 5, 0] }}
+    transition={{ duration: 4, repeat: Infinity }}
+  />
+  <img
+    src={heroPortrait}
+    alt="Manikanta Mutyala - Business & Data Analyst"
+    className="relative rounded-2xl shadow-2xl border-2 border-primary/50 w-full h-full object-cover hover:border-primary transition-all duration-300"
+/>
+</div>
+
 
         {/* Scroll Indicator */}
         <motion.div
