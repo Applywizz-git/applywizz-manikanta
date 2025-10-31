@@ -163,8 +163,8 @@ const contactInfo = [
   {
     icon: Mail,
     label: "Email",
-    value: "manikantamutyala80@gmail.com",
-    link: "mailto:manikantamutyala80@gmail.com", // Ensure this is the correct mailto link
+    value: "manikantamutyala00@gmail.com",
+    link: "mailto:manikantamutyala00@gmail.com", // Ensure this is the correct mailto link
   },
 ];
 
@@ -177,7 +177,7 @@ const socialLinks = [
   {
     icon: Mail,
     label: "Email",
-    link: "mailto:manikantamutyala80@gmail.com", // Ensure this is the correct mailto link
+    link: "mailto:manikantamutyala00@gmail.com", // Ensure this is the correct mailto link
   },
 ];
 
