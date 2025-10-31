@@ -42,10 +42,6 @@ npm install
 npm run dev
 ```
 
-## 📜 Customization
-- Replace `/public/resume.pdf` with the latest resume
-- Adjust brand colors in `tailwind.config.ts` → `extend.colors`
-- Update project images in `src/assets/`
 
 ## 🧠 Optimization
 - Images lazy-loaded + WebP format
